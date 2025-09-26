@@ -92,12 +92,12 @@ const Benefits = () => {
                   JS
                 </div>
                 <div className="ml-3">
-                  <h4 className="font-semibold text-foreground">John Smith</h4>
-                  <p className="text-sm text-muted-foreground">Dealership Owner</p>
+                  <h4 className="font-semibold text-foreground">Shobit Mighlani</h4>
+                  <p className="text-sm text-muted-foreground">Automative DMS</p>
                 </div>
               </div>
               <p className="text-muted-foreground italic">
-                "Trackaroo transformed how we manage our inventory. We've reduced waste by 40% 
+                "Trackaroo transformed how we manage our inventory. We've reduced time waste by 40% 
                 and increased our profit margins significantly."
               </p>
             </div>
@@ -108,8 +108,8 @@ const Benefits = () => {
                   MJ
                 </div>
                 <div className="ml-3">
-                  <h4 className="font-semibold text-foreground">Maria Johnson</h4>
-                  <p className="text-sm text-muted-foreground">Operations Manager</p>
+                  <h4 className="font-semibold text-foreground">Akshay Patni</h4>
+                  <p className="text-sm text-muted-foreground">Field Staff Tracking</p>
                 </div>
               </div>
               <p className="text-muted-foreground italic">
