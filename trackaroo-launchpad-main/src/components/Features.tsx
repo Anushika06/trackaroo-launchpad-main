@@ -8,7 +8,8 @@ import {
   ClipboardCheck, 
   LineChart,
   CreditCard,
-  BarChart3 
+  BarChart3,
+  Fuel
 } from 'lucide-react';
 
 const Features = () => {
@@ -72,19 +73,30 @@ const Features = () => {
       title: "Reports & Analytics",
       description: "Comprehensive business intelligence with customizable reports and insights.",
       color: "bg-primary"
+    },
+    {
+      icon: <Fuel className="w-8 h-8" />,
+      title: "Fuel Management",
+      description: "Track analysis and create fuel slip for company vehicle.",
+      color: "bg-automotive-orange"
     }
   ];
 
   return (
-    <section id="features" className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+    <section id="features" className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 relative overflow-hidden">
+      {/* Subtle Background Elements */}
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-100/10 via-purple-100/10 to-pink-100/10" />
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 left-0 w-80 h-80 bg-purple-200/20 rounded-full blur-3xl" />
+      
+      <div className="container mx-auto px-4 relative z-10">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-foreground mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             Everything Your Automotive Business
-            <span className="block text-gradient">Needs in One Platform</span>
+            <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Needs in One Platform</span>
           </h2>
-          <p className="text-xl text-muted-foreground">
+          <p className="text-xl text-gray-700 font-medium">
             From inventory management to financial tracking, Trackaroo provides all the tools 
             you need to run a successful automotive business efficiently.
           </p>
