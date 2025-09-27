@@ -7,7 +7,16 @@ const userModel = require('./model/userModel');
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+
+const allowedOrigins = [
+  "http://localhost:8081","https://trackaroo-launchpad-main.vercel.app"  
+];
+
+app.use(cors({
+  origin: allowedOrigins,
+  methods: ["GET", "POST"],
+  credentials: true
+}));
 
 dotenv.config();
 

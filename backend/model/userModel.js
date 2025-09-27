@@ -25,7 +25,7 @@ const userSchema=new Schema({
     additionalMsg:{
         type:String
     }
-})
+},{timestamps:true})
 
 const userModel=mongoose.model('user_info',userSchema);
 

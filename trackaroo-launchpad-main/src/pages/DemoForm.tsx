@@ -43,7 +43,7 @@ const handleSubmit = async (e: React.FormEvent) => {
   };
 
   try {
-    const response = await axios.post('http://localhost:3000/', submissionData);
+    const response = await axios.post(`${import.meta.env.VITE_API_URL}/`, submissionData);
     console.log('Submission successful:', response.data);
 
     toast({
