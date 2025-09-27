@@ -1,35 +1,42 @@
-import { TrendingUp, Shield, Clock, Users } from 'lucide-react';
+import { TrendingUp, Shield, Clock, Users } from "lucide-react";
 
 const Benefits = () => {
   const benefits = [
     {
       icon: <TrendingUp className="w-12 h-12" />,
       title: "Increase Revenue by 35%",
-      description: "Optimize your operations and reduce waste with intelligent inventory management and automated workflows.",
-      stats: "Average revenue increase reported by customers"
+      description:
+        "Optimize your operations and reduce waste with intelligent inventory management and automated workflows.",
+      stats: "Average revenue increase reported by customers",
     },
     {
       icon: <Clock className="w-12 h-12" />,
       title: "Save 20+ Hours Weekly",
-      description: "Automate repetitive tasks and streamline processes to focus on growing your business instead of managing paperwork.",
-      stats: "Time saved per week on administrative tasks"
+      description:
+        "Automate repetitive tasks and streamline processes to focus on growing your business instead of managing paperwork.",
+      stats: "Time saved per week on administrative tasks",
     },
     {
       icon: <Shield className="w-12 h-12" />,
       title: "99.9% Data Security",
-      description: "Enterprise-grade security with encrypted data storage, regular backups, and compliance with industry standards.",
-      stats: "Uptime guarantee with bank-level security"
+      description:
+        "Enterprise-grade security with encrypted data storage, regular backups, and compliance with industry standards.",
+      stats: "Uptime guarantee with bank-level security",
     },
     {
       icon: <Users className="w-12 h-12" />,
       title: "Improve Team Productivity",
-      description: "Real-time collaboration tools and mobile access keep your team connected and productive from anywhere.",
-      stats: "Better coordination across all departments"
-    }
+      description:
+        "Real-time collaboration tools and mobile access keep your team connected and productive from anywhere.",
+      stats: "Better coordination across all departments",
+    },
   ];
 
   return (
-    <section id="benefits" className="py-20 bg-gradient-to-br from-accent/30 to-primary-light/20">
+    <section
+      id="benefits"
+      className="py-20 bg-gradient-to-br from-accent/30 to-primary-light/20"
+    >
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="max-w-3xl mx-auto text-center mb-16">
@@ -38,8 +45,9 @@ const Benefits = () => {
             <span className="block text-gradient">Choose Trackaroo</span>
           </h2>
           <p className="text-xl text-muted-foreground">
-            Join hundreds of successful dealerships and automotive businesses that have transformed 
-            their operations with our comprehensive platform.
+            Join hundreds of successful dealerships and automotive businesses
+            that have transformed their operations with our comprehensive
+            platform.
           </p>
         </div>
 
@@ -85,36 +93,47 @@ const Benefits = () => {
           </div>
 
           {/* Testimonials */}
-          <div className="flex justify-center gap-8">
-            <div className="bg-background border border-border rounded-xl p-6">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-8">
+            {/* Testimonial 1 */}
+            <div className="bg-background border border-border rounded-xl p-6 w-full max-w-md">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold">
-                  JS
+                  SM
                 </div>
                 <div className="ml-3">
-                  <h4 className="font-semibold text-foreground">Shobit Mighlani</h4>
-                  <p className="text-sm text-muted-foreground">Automative DMS</p>
+                  <h4 className="font-semibold text-foreground">
+                    Shobit Mighlani
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    Automative DMS
+                  </p>
                 </div>
               </div>
               <p className="text-muted-foreground italic">
-                "Trackaroo transformed how we manage our inventory. We've reduced time waste by 40% 
-                and increased our profit margins significantly."
+                "Trackaroo transformed how we manage our inventory. We've
+                reduced time waste by 40% and increased our profit margins
+                significantly."
               </p>
             </div>
 
-            <div className="bg-background border border-border rounded-xl p-6">
+            {/* Testimonial 2 */}
+            <div className="bg-background border border-border rounded-xl p-6 w-full max-w-md">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold">
-                  MJ
+                  AP
                 </div>
                 <div className="ml-3">
-                  <h4 className="font-semibold text-foreground">Akshay Patni</h4>
-                  <p className="text-sm text-muted-foreground">Field Staff Tracking</p>
+                  <h4 className="font-semibold text-foreground">
+                    Akshay Patni
+                  </h4>
+                  <p className="text-sm text-muted-foreground">
+                    Field Staff Tracking
+                  </p>
                 </div>
               </div>
               <p className="text-muted-foreground italic">
-                "The field staff tracking feature is amazing. We can monitor our team in real-time 
-                and improve customer service delivery."
+                "The field staff tracking feature is amazing. We can monitor our
+                team in real-time and improve customer service delivery."
               </p>
             </div>
           </div>
