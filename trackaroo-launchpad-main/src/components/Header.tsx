@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Menu, X, Car, Calendar, Home } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link'; 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,28 +34,19 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <button 
-              onClick={() => scrollToSection('hero')} 
-              className="group text-gray-600 hover:text-blue-600 font-semibold transition-all duration-300 hover:scale-105 relative flex items-center"
-            >
+            <Link to="/" className="group text-gray-600 hover:text-blue-600 font-semibold transition-all duration-300 hover:scale-105 relative flex items-center">
               <Home className="w-4 h-4 mr-1" />
               Home
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </button>
-            <button 
-              onClick={() => scrollToSection('features')} 
-              className="group text-gray-600 hover:text-blue-600 font-semibold transition-all duration-300 hover:scale-105 relative"
-            >
+            </Link>
+            <HashLink smooth to="/#features" className="group text-gray-600 hover:text-blue-600 font-semibold transition-all duration-300 hover:scale-105 relative">
               Features
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </button>
-            <button 
-              onClick={() => scrollToSection('benefits')} 
-              className="group text-gray-600 hover:text-blue-600 font-semibold transition-all duration-300 hover:scale-105 relative"
-            >
+            </HashLink>
+            <HashLink smooth to="/#benefits" className="group text-gray-600 hover:text-blue-600 font-semibold transition-all duration-300 hover:scale-105 relative">
               Benefits
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-600 to-purple-600 group-hover:w-full transition-all duration-300"></span>
-            </button>
+            </HashLink>
           </nav>
 
           {/* Desktop CTA Buttons */}
@@ -83,25 +75,16 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border bg-white">
             <nav className="flex flex-col space-y-4">
-              <button
-                onClick={() => scrollToSection('hero')}
-                className="text-muted-foreground hover:text-primary transition-colors py-2 flex items-center"
-              >
+              <Link to="/" onClick={() => setIsMenuOpen(false)} className="text-muted-foreground hover:text-primary transition-colors py-2 flex items-center">
                 <Home className="w-4 h-4 mr-2" />
                 Home
-              </button>
-              <button
-                onClick={() => scrollToSection('features')}
-                className="text-muted-foreground hover:text-primary transition-colors py-2"
-              >
+              </Link>
+              <HashLink smooth to="/#features" onClick={() => setIsMenuOpen(false)} className="text-muted-foreground hover:text-primary transition-colors py-2">
                 Features
-              </button>
-              <button
-                onClick={() => scrollToSection('benefits')}
-                className="text-muted-foreground hover:text-primary transition-colors py-2"
-              >
+              </HashLink>
+              <HashLink smooth to="/#benefits" onClick={() => setIsMenuOpen(false)} className="text-muted-foreground hover:text-primary transition-colors py-2">
                 Benefits
-              </button>
+              </HashLink>
               <div className="flex flex-col space-y-2 pt-4 border-t border-border">
                 <Link to="/demo" onClick={() => setIsMenuOpen(false)}>
                   <Button className="bg-gradient-primary justify-start w-full">
