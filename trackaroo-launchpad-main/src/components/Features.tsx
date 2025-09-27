@@ -103,7 +103,7 @@ const Features = () => {
         </div>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7 max-w-7xl mx-auto">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -127,16 +127,7 @@ const Features = () => {
             </div>
           ))}
         </div>
-
-        {/* Bottom CTA */}
-        <div className="text-center mt-16">
-          <p className="text-muted-foreground mb-6">
-            Ready to streamline your automotive business operations?
-          </p>
-          <button className="bg-gradient-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold hover:shadow-glow transition-all duration-300">
-            Explore All Features
-          </button>
-        </div>
+        
       </div>
     </section>
   );

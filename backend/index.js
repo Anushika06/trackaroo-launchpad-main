@@ -14,7 +14,7 @@ dotenv.config();
 connectDB(process.env.dbURL);
 
 app.post('/', async (req, res) => {
-  const { name, phoneNum, email, reason } = req.body;
+  const { name, phoneNum, companyName, email, reason, additionalMsg} = req.body;
 
   try {
     if (!name || name.trim() === '') {
@@ -39,7 +39,8 @@ app.post('/', async (req, res) => {
       return res.status(400).json({ message: 'Reason is required' });
     }
 
-    const user = await userModel.create({ name, phoneNum, email, reason });
+
+    const user = await userModel.create({ name, phoneNum, companyName, email, reason, additionalMsg });
 
     return res.status(201).json(user);
 

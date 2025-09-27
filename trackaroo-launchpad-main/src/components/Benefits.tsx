@@ -85,7 +85,7 @@ const Benefits = () => {
           </div>
 
           {/* Testimonials */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="flex justify-center gap-8">
             <div className="bg-background border border-border rounded-xl p-6">
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold">
@@ -115,22 +115,6 @@ const Benefits = () => {
               <p className="text-muted-foreground italic">
                 "The field staff tracking feature is amazing. We can monitor our team in real-time 
                 and improve customer service delivery."
-              </p>
-            </div>
-
-            <div className="bg-background border border-border rounded-xl p-6 md:col-span-2 lg:col-span-1">
-              <div className="flex items-center mb-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center text-white font-bold">
-                  RW
-                </div>
-                <div className="ml-3">
-                  <h4 className="font-semibold text-foreground">Robert Wilson</h4>
-                  <p className="text-sm text-muted-foreground">Finance Director</p>
-                </div>
-              </div>
-              <p className="text-muted-foreground italic">
-                "The expense tracking and reporting features give us complete financial visibility. 
-                Best investment we've made for our business."
               </p>
             </div>
           </div>

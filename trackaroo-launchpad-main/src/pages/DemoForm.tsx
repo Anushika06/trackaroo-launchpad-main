@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Calendar, Clock, Users, CheckCircle } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import axios from 'axios';
 
 const DemoForm = () => {
   const [formData, setFormData] = useState({
@@ -27,21 +28,29 @@ const DemoForm = () => {
     }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
 
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setIsSubmitting(true);
+
+  const submissionData = {
+    name: formData.name,
+    phoneNum: formData.contactNo,    
+    companyName: formData.company,   
+    email: formData.email,
+    reason: formData.reason,
+    additionalMsg: formData.message 
+  };
+
+  try {
+    const response = await axios.post('http://localhost:3000/', submissionData);
+    console.log('Submission successful:', response.data);
 
     toast({
       title: "Demo Request Submitted!",
-      description: "Thank you for your interest. Our team will contact you within 24 hours to schedule your demo.",
+      description: "Thank you for your interest. Our team will contact you within 24 hours.",
     });
 
-    setIsSubmitting(false);
-    
-    // Reset form
     setFormData({
       name: '',
       email: '',
@@ -50,8 +59,21 @@ const DemoForm = () => {
       company: '',
       message: ''
     });
-  };
 
+  } catch (error: any) {
+    console.error("Submission error:", error);
+
+    const errorMessage = error.response?.data?.message || "Something went wrong. Please try again.";
+
+    toast({
+      title: "Submission Failed",
+      description: errorMessage,
+      variant: "destructive",
+    });
+  } finally {
+    setIsSubmitting(false);
+  }
+};
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 pt-24 pb-32 relative overflow-hidden">
       {/* Beautiful Background Elements */}

@@ -10,6 +10,10 @@ const userSchema=new Schema({
         type:String,
         required:true
     },
+    companyName:{
+        type: String
+    },
+
     email:{
         type:String,
         required:true
@@ -17,6 +21,9 @@ const userSchema=new Schema({
     reason:{
         type:String,
         required:true
+    }, 
+    additionalMsg:{
+        type:String
     }
 })
 

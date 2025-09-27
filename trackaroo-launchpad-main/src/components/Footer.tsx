@@ -39,8 +39,6 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Features</a></li>
               <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Integrations</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-white transition-colors">API</a></li>
               <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Mobile App</a></li>
             </ul>
           </div>
@@ -50,8 +48,6 @@ const Footer = () => {
             <h3 className="text-xl font-heading font-semibold mb-6">Company</h3>
             <ul className="space-y-3">
               <li><a href="#" className="text-slate-300 hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" className="text-slate-300 hover:text-white transition-colors">News</a></li>
               <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Partners</a></li>
               <li><a href="#" className="text-slate-300 hover:text-white transition-colors">Contact</a></li>
             </ul>
@@ -63,19 +59,11 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-slate-300">hello@trackaroo.com</span>
+                <span className="text-slate-300">pratyushm704@gmail.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <span className="text-slate-300">+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                <span className="text-slate-300">
-                  123 Business Ave<br />
-                  Suite 100<br />
-                  San Francisco, CA 94105
-                </span>
+                <span className="text-slate-300">+91 9424640286</span>
               </div>
             </div>
           </div>
@@ -90,7 +78,6 @@ const Footer = () => {
             <div className="flex items-center space-x-6 text-sm">
               <a href="#" className="text-slate-400 hover:text-white transition-colors">Privacy Policy</a>
               <a href="#" className="text-slate-400 hover:text-white transition-colors">Terms of Service</a>
-              <a href="#" className="text-slate-400 hover:text-white transition-colors">Cookie Policy</a>
             </div>
           </div>
         </div>

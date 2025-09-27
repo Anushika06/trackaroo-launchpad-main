@@ -65,14 +65,14 @@ const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent transform -translate-x-full group-hover:translate-x-full transition-transform duration-500"></div>
               </Button>
             </Link>
-            <Button 
+            {/* <Button 
               variant="outline" 
               size="lg" 
               className="group relative text-gray-700 border-2 border-gray-300 hover:border-blue-400 hover:bg-gradient-to-r hover:from-blue-50 hover:to-purple-50 font-bold text-lg px-10 py-4 rounded-xl shadow-lg hover:shadow-blue-500/20 transform hover:scale-105 transition-all duration-300 backdrop-blur-sm"
             >
               <Play className="mr-3 w-5 h-5 group-hover:scale-110 transition-transform duration-300" />
               Watch Demo
-            </Button>
+            </Button> */}
           </div>
 
           {/* Trust Indicators */}
